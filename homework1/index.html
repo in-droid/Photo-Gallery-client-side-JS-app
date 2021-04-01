@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="lightbox.css" rel="stylesheet">
+    <title>WGallery</title>
+</head>
+<body>
+    <nav>
+        <a id="home" class="active" href="#">WGallery</a>
+        <a id="references" href="references.html">References</a>
+        <div id="search" class="search-container">
+          <form>
+            <input type="text" id="searchText" placeholder="Search.." name="search">
+            <button id="submitSearch" type="button"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+    </nav>
+    <div id="mainContent">
+        <div class="photo-upload">
+            <h3>Add a photo</h3>
+            <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop image here or click to upload</span>
+                <input type="file" name="myFile" class="drop-zone__input">
+            </div>
+        </div>
+        <section id="gallery" class="wrapper-gallery">
+            <h2>My photo gallery</h2>
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                </div>
+            </div>
+        </section>
+        <aside id="controls">
+            <h3>Options</h3>
+            <form>
+                <label class="switch">
+                    <input type="checkbox" id="editMode">
+                        <span class="slider round"></span>
+                        <span class="slider-text">Edit photos</span>
+                </label>
+            </form>
+            <button id="showAll" type="button">Show  all</button>
+            <button id="deleteSelected" type="button">Delete <br> selected</button>
+            <form id="tagInput">
+                <label for="tagInputText">Tag:</label>
+                <input id="tagInputText" type="text" placeholder="Add a tag">
+                <button id="submitTags" type="button">Submit</button>
+            </form>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
